@@ -1,0 +1,97 @@
+
+<!--<script src="cal.js"></script> -->
+
+<html>
+    <head> 
+        <script src="system.js"></script>
+        <script>
+            SystemJS.config(
+                {
+                    transpiler: 'typescript', 
+                    baseURL: '.', 
+                    packages: { 
+                        '.': { 
+                            format: 'system',
+                            defaultExtension: 'js' 
+                        } 
+                    },
+                }
+            );
+            SystemJS.import('cal.js');
+        </script>   
+    </head>
+    <body>
+        <form name = "yj_cal">
+        <center>
+           <table border="1">
+               <tr>
+                   <th colspan="4"> 계산기 </th>
+               </tr>
+                <tr>
+                   <td colspan="4"> 
+                       <input text = "text" id = "view" name = "view" readonly> 
+                   </td>
+               </tr>
+               <tr>
+                   <td>
+                       <input type = "button" id="button_7" value="  7  "> 
+                   </td>
+                   <td>
+                       <input type = "button" id="button_8" value="  8  ">
+                   </td>
+                   <td> 
+                       <input type = "button" id="button_9" value="  9  ">
+                   </td>
+                   <td> 
+                       <input type = "button" value="  /  " id="button_div"> 
+                   </td>
+               </tr>
+               <tr>
+                   <td> 
+                       <input type = "button" id="button_4" value="  4  "> 
+                   </td>
+                   <td> 
+                       <input type = "button" id="button_5" value="  5  ">
+                   </td>
+                   <td> 
+                       <input type = "button" id="button_6" value="  6  ">  
+                   </td>
+                   <td> 
+                       <input type = "button" value="  *  " id="button_mul">  
+                   </td>
+               </tr>
+               <tr>
+                   <td> 
+                       <input type = "button" id="button_1" value="  1  ">  
+                   </td>
+                   <td> 
+                       <input type = "button" id="button_2" value="  2  ">  
+                   </td>
+                   <td> 
+                       <input type = "button" id="button_3" value="  3  ">  
+                   </td>
+                   <td> 
+                       <input type = "button" value=" + " id="button_add">  
+                   </td>
+               </tr>
+                <tr>
+                   <td> 
+                       <input type = "button" value="  AC " id="button_AC">  
+                   </td>
+                   <td> 
+                       <input type = "button" id="button_0" value="  0  ">  
+                   </td>
+                   <td> 
+                       <input type = "button" value="  = " id="button_result">  
+                   </td>
+                   <td> 
+                       <input type = "button" value="  -  " id="button_min">  
+                   </td>
+               </tr>
+           </table> 
+        </center>
+        </form>        
+    </body>
+</html>
+
+
